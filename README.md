@@ -1,3 +1,8 @@
+#change ssh port
+  vi /etc/ssh/sshd_config
+##Uncomment Port 22, new value (from 49152 through 65535) 
+  service sshd restart
+
 # guide-to-newvpp
 Build from source: 
 1. ##Get the latest source code 
@@ -37,15 +42,16 @@ Build from source:
      make install
 
 5. ##Create file shadowsocks.json
+   ##port between 30k to 60k
 {
     "server":"138.68.18.65",
-    "server_port":443,
+    "server_port":65535,
     "local_address": "127.0.0.1",
     "local_port":1080,
     "password":"",
     "timeout":300,
     "method":"chacha20-ietf-poly1305",
-    "fast_open": false
+    "fast_open": true
 }
 
 6. setsid ss-server -c /etc/shadowsocks.json
