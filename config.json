@@ -1,0 +1,14 @@
+{
+    "listen": "138.68.18.65:40000",
+    "target": "138.68.18.65:59999",
+    "key": "",
+    "crypt": "salsa20",
+    "mode": "fast2",
+    "mtu": 1400,
+    "sndwnd": 2048,
+    "rcvwnd": 2048,
+    "datashard": 0,
+    "parityshard": 0,
+    "dscp": 46,
+    "nocomp": true
+}
